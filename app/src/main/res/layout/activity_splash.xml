@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Relative => with respect to -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/splashLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/digital_card"
+        />
+
+    <TextView
+        android:id="@+id/digitalCardText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/splashLogo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:text="DIGITAL CARD"
+        android:letterSpacing="0.5"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textFontWeight="900"
+        android:textSize="24sp"
+        />
+
+    <ProgressBar
+        android:id="@+id/splashProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/digitalCardText"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+
+
+
+        />
+
+
+
+
+</RelativeLayout>
