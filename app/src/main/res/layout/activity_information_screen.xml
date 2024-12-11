@@ -1,10 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
+    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InformationScreen">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:ignore="MissingClass">
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar"
+            app:titleTextColor="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digi Card"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:letterSpacing="0.2"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_below="@id/toolbar"
+            android:src="@drawable/userprofile"
+            android:layout_marginTop="20dp"
+            android:foregroundGravity="center"
+            android:layout_centerInParent="true"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/personalInfo"
+            android:text="Personal Info"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/profile_image"
+            android:layout_marginStart="20dp"
+            android:textFontWeight="700"/>
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:dividerColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/personalInfo"
+            />
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
+<!--            app:hintTextColor="@color/black"-->
+<!--            app:boxStrokeColor="@color/black"-->
+<!--            app:boxBackgroundMode="outline"-->
+<!--            android:id="@+id/fullName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/full_name"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_below="@id/divider1"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            />-->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/designation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Designation"
+            android:textColorHint="@color/black"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/fullName"
+            android:layout_marginTop="15dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/companyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Company"
+            android:textColorHint="@color/black"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/designation"
+            android:layout_marginTop="15dp"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/aboutMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="About Me"
+            android:textColorHint="@color/black"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/companyName"
+            android:height="120dp"
+            android:layout_marginTop="15dp"
+            android:gravity="top"
+            />
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</ScrollView>
