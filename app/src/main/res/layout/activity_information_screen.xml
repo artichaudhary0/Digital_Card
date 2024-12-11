@@ -74,20 +74,20 @@
             />
 
 
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
-<!--            app:hintTextColor="@color/black"-->
-<!--            app:boxStrokeColor="@color/black"-->
-<!--            app:boxBackgroundMode="outline"-->
-<!--            android:id="@+id/fullName"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:hint="@string/full_name"-->
-<!--            android:textColorHint="@color/black"-->
-<!--            android:layout_marginHorizontal="20dp"-->
-<!--            android:layout_below="@id/divider1"-->
-<!--            android:layout_marginTop="15dp"-->
-<!--            />-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:boxBackgroundMode="outline"
+            android:id="@+id/fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/full_name"
+            android:textColorHint="@color/black"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/divider1"
+            android:layout_marginTop="15dp"
+            />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/designation"
