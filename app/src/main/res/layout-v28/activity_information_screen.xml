@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/digi_card"
+                android:text="Digi Card"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:letterSpacing="0.2"
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/personalInfo"
-            android:text="@string/personal_info"
+            android:text="Personal Info"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="normal"
@@ -72,6 +72,10 @@
             android:layout_marginTop="10dp"
             android:layout_below="@id/personalInfo"
             />
+
+
+
+
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -106,7 +110,7 @@
             android:id="@+id/designation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/designation"
+            android:hint="Designation"
             android:textColorHint="@color/black"
             android:layout_marginHorizontal="20dp"
             android:layout_below="@id/fullName"
@@ -130,7 +134,7 @@
             android:id="@+id/company"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/company"
+            android:hint="Company"
             android:textColorHint="@color/black"
             android:layout_marginHorizontal="20dp"
             android:layout_below="@id/designation"
@@ -176,7 +180,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/contactInfo"
-            android:text="@string/contact_info"
+            android:text="Contact Info"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="normal"
@@ -208,7 +212,7 @@
             android:id="@+id/contact_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/contact_number"
+            android:hint="Contact Number"
             android:textColorHint="@color/black"
             android:layout_marginHorizontal="20dp"
             android:layout_below="@id/divider2"
@@ -228,7 +232,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/whatsapp_text"
-            android:text="@string/this_is_whatsapp_number"
+            android:text="This is WhatsApp number"
             android:textColor="@color/black"
             android:textSize="12sp"
             android:textStyle="normal"
@@ -253,7 +257,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/yesWhatsApp"
-                android:text="@string/yes"
+                android:text="Yes"
                 android:textColor="@color/black"
                />
 
@@ -261,7 +265,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/noWhatsApp"
-                android:text="@string/no"
+                android:text="No"
                 android:textColor="@color/black"
                 />
         </RadioGroup>
@@ -275,7 +279,7 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email"
+            android:hint="Email"
             android:textColorHint="@color/black"
             android:layout_marginHorizontal="20dp"
             android:layout_below="@id/radioGroupWhatsApp"
@@ -299,7 +303,7 @@
             android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/address"
+            android:hint="Address"
             android:textColorHint="@color/black"
             android:layout_marginHorizontal="20dp"
             android:layout_below="@id/email"
@@ -350,7 +354,7 @@
             android:id="@+id/service"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/about_me"
+            android:hint="About me"
             android:textColorHint="@color/black"
             android:layout_marginHorizontal="20dp"
             android:layout_below="@id/divider3"

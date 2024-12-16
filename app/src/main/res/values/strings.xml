@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="full_name">Full name</string>
+    <string name="service_info">Service Info</string>
+    <string name="about_me">About me</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="this_is_whatsapp_number">This is WhatsApp number</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="company">Company</string>
+    <string name="designation">Designation</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="digi_card">Digi Card</string>
 </resources>
