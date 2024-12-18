@@ -1,10 +1,346 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainRelative"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailsScreen">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cRelative"
+        android:background="@color/teal"
+        android:paddingBottom="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:id="@+id/profile_picture"
+            android:src="@drawable/userprofile"
+            app:civ_border_color="@color/white"
+            android:paddingTop="20dp"
+            />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/userName"
+           android:layout_below="@id/profile_picture"
+           android:gravity="center"
+           android:text=""
+           android:textColor="@color/white"
+           android:textFontWeight="700"
+           android:textSize="24sp"
+           android:textStyle="normal"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userDesignation"
+            android:layout_below="@id/userName"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="24sp"
+            android:textStyle="normal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userCompany"
+            android:layout_below="@id/userDesignation"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="24sp"
+            android:textStyle="normal"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cRelative"
+        android:background="@color/white"
+        android:id="@+id/contentRelative">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/iconsLayout"
+            android:layout_marginTop="0dp">
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/call"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/baseline_call_24"
+                android:background="@color/white"
+
+                android:backgroundTint="@color/white"
+                android:contentDescription="call"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/message"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/locations"
+                android:contentDescription="call"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/location"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/message"
+                android:backgroundTint="@color/white"
+                android:contentDescription="call"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userAboutMe"
+            android:layout_below="@id/iconsLayout"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            android:text="About Me"
+            android:textStyle="normal"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userAboutMeText"
+            android:layout_below="@id/userAboutMe"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="20dp"
+            android:text=""
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/divider4"
+
+            android:layout_below="@id/userAboutMeText"
+            app:dividerColor="@color/black"
+            android:layout_marginHorizontal="20dp"
+            />
+<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userContact"
+            android:layout_below="@id/divider4"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Contact"
+            android:textStyle="normal"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userContactText"
+            android:layout_below="@id/userContact"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="20dp"
+            android:text=""
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/divider5"
+            android:layout_below="@id/userContactText"
+            app:dividerColor="@color/black"
+            android:layout_marginHorizontal="20dp"
+            />
+<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userWhatsApp"
+            android:layout_below="@id/divider5"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            android:text="WhatsApp"
+            android:textStyle="normal"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userWhatsAppText"
+            android:layout_below="@id/userWhatsApp"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="20dp"
+            android:text=""
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/divider6"
+            android:layout_below="@id/userWhatsAppText"
+            app:dividerColor="@color/black"
+            android:layout_marginHorizontal="20dp"
+            />
+<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userEmail"
+            android:layout_below="@id/divider6"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Email"
+            android:textStyle="normal"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userEmailText"
+            android:layout_below="@id/userEmail"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="20dp"
+            android:text=""
+            android:layout_marginBottom="10dp"
+            android:textStyle="normal"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/divider7"
+            android:layout_below="@id/userEmailText"
+            app:dividerColor="@color/black"
+            android:layout_marginHorizontal="20dp"
+            />
+<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userAddress"
+            android:layout_below="@id/divider7"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Address"
+            android:textStyle="normal"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userAddressText"
+            android:layout_below="@id/userAddress"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="20dp"
+            android:text=""
+            android:textStyle="normal"
+            android:layout_marginBottom="10dp"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/divider8"
+            android:layout_below="@id/userAddressText"
+            app:dividerColor="@color/black"
+            android:layout_marginHorizontal="20dp"
+            />
+<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userServiceInfo"
+            android:layout_below="@id/divider8"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="20dp"
+            android:text="Service"
+            android:textStyle="normal"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userServiceInfoText"
+            android:layout_below="@id/userServiceInfo"
+            android:textFontWeight="900"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="20dp"
+            android:text=""
+            android:textStyle="normal"
+            android:layout_marginBottom="10dp"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/divider9"
+            android:layout_below="@id/userServiceInfoText"
+            app:dividerColor="@color/black"
+            android:layout_marginHorizontal="20dp"
+            />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/message"
+            android:contentDescription="ytuf"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

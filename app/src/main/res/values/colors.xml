@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="splash">#3ad2ed</color>
     <color name="toolbar">#018786</color>
+    <color name="teal">#018786</color>
 </resources>
