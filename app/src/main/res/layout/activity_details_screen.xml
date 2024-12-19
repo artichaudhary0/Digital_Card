@@ -115,13 +115,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/userAboutMe"
-            android:layout_below="@id/iconsLayout"
             android:textFontWeight="900"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_marginHorizontal="20dp"
             android:text="About Me"
             android:textStyle="normal"
+            android:layout_below="@id/iconsLayout"
 
             />
 
@@ -148,7 +148,7 @@
             app:dividerColor="@color/black"
             android:layout_marginHorizontal="20dp"
             />
-<TextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/userContact"
@@ -184,7 +184,7 @@
             app:dividerColor="@color/black"
             android:layout_marginHorizontal="20dp"
             />
-<TextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/userWhatsApp"
@@ -220,7 +220,7 @@
             app:dividerColor="@color/black"
             android:layout_marginHorizontal="20dp"
             />
-<TextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/userEmail"
@@ -256,7 +256,7 @@
             app:dividerColor="@color/black"
             android:layout_marginHorizontal="20dp"
             />
-<TextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/userAddress"
@@ -292,7 +292,7 @@
             app:dividerColor="@color/black"
             android:layout_marginHorizontal="20dp"
             />
-<TextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/userServiceInfo"
@@ -330,17 +330,40 @@
             />
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/message"
-            android:contentDescription="ytuf"/>
+            android:layout_below="@id/divider9"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/saveDoc"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/message"
+                android:contentDescription="ytuf"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:id="@+id/editContent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="100dp"
+                android:layout_below="@id/divider9"
+                android:src="@drawable/message"
+                android:contentDescription="ytuf"/>
+
+        </LinearLayout>
 
 
 
     </RelativeLayout>
+
 
 </RelativeLayout>
