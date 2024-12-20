@@ -5,5 +5,8 @@
     <color name="splash">#3ad2ed</color>
     <color name="toolbar">#018786</color>
     <color name="teal">#018786</color>
+<<<<<<< HEAD
     <color name="purple">#461ff4</color>
+=======
+>>>>>>> e3027825dbe31f4776ee8fcdc9291dee7c29a05d
 </resources>

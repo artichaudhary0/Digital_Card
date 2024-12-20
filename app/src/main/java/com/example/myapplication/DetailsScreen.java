@@ -1,6 +1,9 @@
 package com.example.myapplication;
 
+<<<<<<< HEAD
 import android.app.Dialog;
+=======
+>>>>>>> e3027825dbe31f4776ee8fcdc9291dee7c29a05d
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -30,8 +33,13 @@ public class DetailsScreen extends AppCompatActivity {
 
     FloatingActionButton editScreenBox,saveDocButton;
     RelativeLayout headerBox, contentBox, mainView;
+<<<<<<< HEAD
 
     TextView fullNameTextView, designationTextView,userCompanyTextView,userAboutMeTextView,userWhatsAppTextView,userContactTextView,userEmailTextView,userAddressTextView,userServicesTextView;
+=======
+    String fullName;
+    TextView fullNameTextView, designationTextView,userCompanyTextView,userEmailTextView,userAddressTextView,userServicesTextView;
+>>>>>>> e3027825dbe31f4776ee8fcdc9291dee7c29a05d
 
 
 
@@ -108,6 +116,7 @@ public class DetailsScreen extends AppCompatActivity {
                 Toast.makeText(DetailsScreen.this,"error",Toast.LENGTH_SHORT).show();
             }
 
+<<<<<<< HEAD
             String fullName = intent.getStringExtra("fullName");
             String designation = intent.getStringExtra("designation");
             String company = intent.getStringExtra("company");
@@ -158,4 +167,9 @@ public class DetailsScreen extends AppCompatActivity {
 
     }
 
+=======
+        }
+    }
+
+>>>>>>> e3027825dbe31f4776ee8fcdc9291dee7c29a05d
 }
