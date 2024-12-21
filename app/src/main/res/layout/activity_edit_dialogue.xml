@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/activity_edit_dialogue"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -142,8 +142,131 @@
     </HorizontalScrollView>
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Content Font Style"
+        android:id="@+id/contentFontStyle"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="visible"
+        android:layout_below="@id/ContentImageBox"
+        />
 
 
+    <HorizontalScrollView
+        android:id="@+id/ContentFontStyleBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contentFontStyle"
+        android:foregroundGravity="center"
+        android:background="@color/white">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text1"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/hindi"
+                android:text="नमस्ते"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text2"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/play"
+                android:text="Hello"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text3"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/playfair"
+                android:text="Hello"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text4"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/playread"
+                android:text="Hello"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text5"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/playwrite"
+                android:text="Hello"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text6"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/siliguri"
+                android:text="Hello"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text7"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/sofiasans"
+                android:text="Hello"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/ContentFontStyleBox"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"/>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:id="@+id/resetButton"
+                />
+
+        </LinearLayout>
 
 
 

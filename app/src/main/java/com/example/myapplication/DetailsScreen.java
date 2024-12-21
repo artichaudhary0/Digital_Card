@@ -1,24 +1,25 @@
 package com.example.myapplication;
 
-<<<<<<< HEAD
+import android.annotation.SuppressLint;
 import android.app.Dialog;
-=======
->>>>>>> e3027825dbe31f4776ee8fcdc9291dee7c29a05d
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.core.content.res.ResourcesCompat;
+
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -33,13 +34,11 @@ public class DetailsScreen extends AppCompatActivity {
 
     FloatingActionButton editScreenBox,saveDocButton;
     RelativeLayout headerBox, contentBox, mainView;
-<<<<<<< HEAD
 
     TextView fullNameTextView, designationTextView,userCompanyTextView,userAboutMeTextView,userWhatsAppTextView,userContactTextView,userEmailTextView,userAddressTextView,userServicesTextView;
-=======
+
     String fullName;
-    TextView fullNameTextView, designationTextView,userCompanyTextView,userEmailTextView,userAddressTextView,userServicesTextView;
->>>>>>> e3027825dbe31f4776ee8fcdc9291dee7c29a05d
+
 
 
 
@@ -54,12 +53,12 @@ public class DetailsScreen extends AppCompatActivity {
         saveDocButton = findViewById(R.id.saveDoc);
         getData();
 
-//        editScreenBox.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                customEditBox();
-//            }
-//        });
+        editScreenBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              customEditBox();
+            }
+        });
 
         saveDocButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,7 +115,7 @@ public class DetailsScreen extends AppCompatActivity {
                 Toast.makeText(DetailsScreen.this,"error",Toast.LENGTH_SHORT).show();
             }
 
-<<<<<<< HEAD
+
             String fullName = intent.getStringExtra("fullName");
             String designation = intent.getStringExtra("designation");
             String company = intent.getStringExtra("company");
@@ -160,16 +159,175 @@ public class DetailsScreen extends AppCompatActivity {
 
 
     void customEditBox(){
-        Dialog dialog = new Dialog(this);
-//        dialog.setContentView();
+        Dialog dialog = new Dialog(DetailsScreen.this);
+        dialog.setContentView(R.layout.activity_edit_dialogue);
 
+
+        LinearLayout blackColor = dialog.findViewById(R.id.blackColor);
+        LinearLayout tealColor = dialog.findViewById(R.id.tealColor);
+        LinearLayout splashColor = dialog.findViewById(R.id.splashColor);
+        LinearLayout purpleColor = dialog.findViewById(R.id.purpleColor);
+
+
+
+        LinearLayout bg1 = dialog.findViewById(R.id.bg1);
+        LinearLayout bg2 = dialog.findViewById(R.id.bg2);
+        LinearLayout bg3 = dialog.findViewById(R.id.bg3);
+        LinearLayout bg4 = dialog.findViewById(R.id.bg4);
+        LinearLayout bg5 = dialog.findViewById(R.id.bg5);
+
+        TextView text1 = dialog.findViewById(R.id.text1);
+        TextView text2 = dialog.findViewById(R.id.text2);
+        TextView text3 = dialog.findViewById(R.id.text3);
+        TextView text4 = dialog.findViewById(R.id.text4);
+        TextView text5 = dialog.findViewById(R.id.text5);
+        TextView text6 = dialog.findViewById(R.id.text6);
+        TextView text7 = dialog.findViewById(R.id.text7);
+
+
+        Button cancelButton = dialog.findViewById(R.id.cancelButton);
+        Button resetButton = dialog.findViewById(R.id.resetButton);
+
+        text1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setText(R.font.hindi);
+            }
+        });
+
+        text2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setText(R.font.play);
+            }
+        });
+
+        text3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setText(R.font.playfair);
+            }
+        });
+
+        text4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setText(R.font.playread);
+            }
+        });
+
+        text5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setText(R.font.playwrite);
+            }
+        });
+
+        text6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setText(R.font.siliguri);
+            }
+        });
+
+        text7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setText(R.font.sofiasans);
+            }
+        });
+
+
+        resetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setText(R.font.defaultstyle);
+
+                headerBox.setBackgroundColor(getColor(R.color.teal));
+                contentBox.setBackground(getDrawable(R.color.white));
+
+            }
+        });
+
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+
+        blackColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                headerBox.setBackgroundColor(getColor(R.color.black));
+            }
+        });
+        splashColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                headerBox.setBackgroundColor(getColor(R.color.splash));
+            }
+        });
+        tealColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                headerBox.setBackgroundColor(getColor(R.color.teal));
+            }
+        });
+        purpleColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                headerBox.setBackgroundColor(getColor(R.color.purple));
+            }
+        });
+
+
+        bg1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contentBox.setBackground(getDrawable(R.drawable.bg1));
+            }
+        });
+
+        bg2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contentBox.setBackground(getDrawable(R.drawable.bg2));
+            }
+        });
+
+        bg3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contentBox.setBackground(getDrawable(R.drawable.bg3));
+            }
+        });
+
+        bg4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contentBox.setBackground(getDrawable(R.drawable.bg4));
+            }
+        });
+
+        bg5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                contentBox.setBackground(getDrawable(R.drawable.bg5));
+            }
+        });
+
+        dialog.show();
+    }
+
+    void setText(int font){
+        fullNameTextView.setTypeface(ResourcesCompat.getFont(DetailsScreen.this,font));
+        designationTextView.setTypeface(ResourcesCompat.getFont(DetailsScreen.this,font));
+        userCompanyTextView.setTypeface(ResourcesCompat.getFont(DetailsScreen.this,font));
 
 
     }
 
-=======
         }
-    }
-
->>>>>>> e3027825dbe31f4776ee8fcdc9291dee7c29a05d
-}

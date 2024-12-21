@@ -14,9 +14,8 @@
     <string name="designation">Designation</string>
     <string name="personal_info">Personal Info</string>
     <string name="digi_card">Digi Card</string>
-<<<<<<< HEAD
+
     <string name="content_theme">Content Theme</string>
     <string name="header_theme">Header Theme</string>
-=======
->>>>>>> e3027825dbe31f4776ee8fcdc9291dee7c29a05d
+
 </resources>
