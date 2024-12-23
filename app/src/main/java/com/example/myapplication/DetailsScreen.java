@@ -1,11 +1,9 @@
 package com.example.myapplication;
-
-import android.annotation.SuppressLint;
 import android.app.Dialog;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -32,7 +30,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DetailsScreen extends AppCompatActivity {
 
-    FloatingActionButton editScreenBox,saveDocButton;
+    FloatingActionButton editScreenBox,saveDocButton,callButton,messageButton,locationButton;
     RelativeLayout headerBox, contentBox, mainView;
 
     TextView fullNameTextView, designationTextView,userCompanyTextView,userAboutMeTextView,userWhatsAppTextView,userContactTextView,userEmailTextView,userAddressTextView,userServicesTextView;
@@ -49,6 +47,45 @@ public class DetailsScreen extends AppCompatActivity {
         setContentView(R.layout.activity_details_screen);
         mainView = findViewById(R.id.mainRelative);
 
+        callButton = findViewById(R.id.call);
+        messageButton = findViewById(R.id.message);
+        locationButton = findViewById(R.id.location);
+
+
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                callIntent.setData(Uri.parse("tel:47356475845")); // replace with proper no.
+                startActivity(callIntent);
+
+            }
+        });
+
+        messageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent messageIntent = new Intent(Intent.ACTION_SENDTO);
+                messageIntent.setData(Uri.parse("smsto:3546453645"));// replace with proper no.
+                messageIntent.putExtra("sms_body","Hello");
+                startActivity(messageIntent);
+            }
+        });
+
+
+        locationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String geoUri = "geo:0,0?q=Surat,Gujarat,India";
+                Intent locationIntent = new Intent(Intent.ACTION_VIEW,Uri.parse(geoUri));
+                startActivity(locationIntent);
+
+            }
+        });
+
+
+
+
 
         saveDocButton = findViewById(R.id.saveDoc);
         getData();
@@ -56,7 +93,7 @@ public class DetailsScreen extends AppCompatActivity {
         editScreenBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              customEditBox();
+//              customEditBox();
             }
         });
 
@@ -104,13 +141,22 @@ public class DetailsScreen extends AppCompatActivity {
 
         if(intent != null)
         {
-            byte[] byteArray = intent.getByteArrayExtra("profilePicture");
+            String imagePath = intent.getStringExtra("profilePicturePath");
 
-            if(byteArray != null)
+            if(imagePath != null)
             {
-                Bitmap profilePicture = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
-                CircleImageView profileImageView = findViewById(R.id.profile_picture);
-                profileImageView.setImageBitmap(profilePicture);
+                File imageFile = new File(imagePath);
+                if (imageFile.exists()) {
+                    Bitmap profilePicture = BitmapFactory.decodeFile(imagePath);
+                    CircleImageView profileImageView = findViewById(R.id.profile_picture);
+                    profileImageView.setImageBitmap(profilePicture);
+
+//                Bitmap profilePicture = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
+//                CircleImageView profileImageView = findViewById(R.id.profile_picture);
+//                profileImageView.setImageBitmap(profilePicture);
+
+                }
+
             }else {
                 Toast.makeText(DetailsScreen.this,"error",Toast.LENGTH_SHORT).show();
             }
@@ -155,7 +201,7 @@ public class DetailsScreen extends AppCompatActivity {
             userServicesTextView.setText(services);
             userWhatsAppTextView.setText(selected);
         }
-    }
+    };
 
 
     void customEditBox(){
@@ -323,11 +369,12 @@ public class DetailsScreen extends AppCompatActivity {
     }
 
     void setText(int font){
-        fullNameTextView.setTypeface(ResourcesCompat.getFont(DetailsScreen.this,font));
-        designationTextView.setTypeface(ResourcesCompat.getFont(DetailsScreen.this,font));
-        userCompanyTextView.setTypeface(ResourcesCompat.getFont(DetailsScreen.this,font));
+            fullNameTextView.setTypeface(ResourcesCompat.getFont(DetailsScreen.this, font));
+            designationTextView.setTypeface(ResourcesCompat.getFont(DetailsScreen.this, font));
+            userCompanyTextView.setTypeface(ResourcesCompat.getFont(DetailsScreen.this, font));
 
 
     }
 
         }
+

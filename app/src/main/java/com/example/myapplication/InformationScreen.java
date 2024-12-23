@@ -20,6 +20,9 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -98,16 +101,28 @@ public class InformationScreen extends AppCompatActivity {
                     serviceInfoTextLayout.setError("Please Enter Name");
                     serviceInfoText.requestFocus();
                 }else{
-                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                    Bitmap bitmap = ((BitmapDrawable) circleImageView.getDrawable()).getBitmap();
 
-                    bitmap.compress(Bitmap.CompressFormat.PNG,100,stream);
+//                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//                    Bitmap bitmap = ((BitmapDrawable) circleImageView.getDrawable()).getBitmap();
+//
+//                    bitmap.compress(Bitmap.CompressFormat.JPEG,100,stream);
+//
+//                    byte[] byteArray = stream.toByteArray();
+//                    Intent intent = new Intent(InformationScreen.this, DetailsScreen.class);
+//                    intent.putExtra("profilePicture",byteArray);
 
-                    byte[] byteArray = stream.toByteArray();
+                    File tempFile;
+                    try {
+                        tempFile = saveImageToCache();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                     Intent intent = new Intent(InformationScreen.this, DetailsScreen.class);
 
-                    intent.putExtra("profilePicture",byteArray);
 
+
+
+                    intent.putExtra("profilePicturePath", tempFile.getAbsolutePath());
                     intent.putExtra("fullName",fullName);
                     intent.putExtra("designation",designation);
                     intent.putExtra("company",company);
@@ -181,5 +196,14 @@ public class InformationScreen extends AppCompatActivity {
                 circleImageView.setImageBitmap(b1);
             }
         }
-    };
+    }
+
+    private File saveImageToCache() throws IOException {
+        Bitmap bitmap = ((BitmapDrawable) circleImageView.getDrawable()).getBitmap();
+        File tempFile = new File(getCacheDir(), "profile_picture.jpg");
+        try (FileOutputStream fos = new FileOutputStream(tempFile)) {
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+        }
+        return tempFile;
+    }
 }

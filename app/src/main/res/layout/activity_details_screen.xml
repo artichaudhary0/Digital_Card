@@ -83,7 +83,6 @@
                 android:layout_marginBottom="16dp"
                 android:src="@drawable/baseline_call_24"
                 android:background="@color/white"
-
                 android:backgroundTint="@color/white"
                 android:contentDescription="call"/>
 
@@ -96,8 +95,9 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="@color/white"
-                android:src="@drawable/locations"
+                android:src="@drawable/message"
                 android:contentDescription="call"/>
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:src="@drawable/message"
+                android:src="@drawable/locations"
                 android:backgroundTint="@color/white"
                 android:contentDescription="call"/>
         </LinearLayout>
